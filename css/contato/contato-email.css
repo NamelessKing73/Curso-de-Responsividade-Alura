@@ -1,0 +1,27 @@
+.contato__email {
+    border: 1px solid var(--azul-escuro);
+    border-radius: 24px;
+    color: var(--azul-escuro);
+    padding: 1em;
+    width: 90%;
+}
+
+.contato__email::placeholder {
+    background: url(../../img/Email.svg) no-repeat;
+    background-position: 1em;
+    color: var(--azul-escuro);
+    font-family: var(--fonte-principal);
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+    .contato__email {
+        width: 30%;
+    }
+
+    .contato__email::placeholder {
+        font-size: 16px;
+    }
+}

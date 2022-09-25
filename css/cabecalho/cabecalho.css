@@ -1,0 +1,103 @@
+.cabecalho {
+    align-items: center;
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.container__titulo, .container__texto, .options {
+    display: none;
+}
+
+/* Tablet's screen */
+
+@media screen and (min-width: 1024px) {
+    .cabecalho__menu-hamburguer, 
+    .container__rotulo, 
+    .container__imagem-transparente, 
+    .options__botao {
+        display: none;
+    }
+
+    .container__titulo, .container__titulo--negrito {
+        font-family: var(--fonte-secundaria);
+        font-size: 30px;
+    }
+
+    .container__titulo {
+        display: block;
+        font-weight: 400;
+    }
+
+    .container__titulo--negrito {
+        font-weight: 700;
+    }
+
+    .options {
+        display: flex;
+    }
+
+    .options__item, .options__link {
+        padding: 2em 1em;
+        text-transform: uppercase;
+        transition: 1s;
+    }
+
+    .options__link {
+        color: var(--preto);
+        text-decoration: none;
+    }
+
+    .options__link:hover {
+        background: var(--azul-degrade);
+        color: var(--branco);
+        transition: 1s;
+    }
+
+    .options__botao:checked ~ .lista-menu {
+        display: block;
+        width: auto;
+    }
+
+    .options__botao:checked ~ .options__rotulo > .options__item {
+        background: var(--azul-degrade);
+        color: var(--branco);
+    }
+
+    .options__botao:hover ~ .options__rotulo > .options__item {
+        background: var(--azul-degrade);
+        color: var(--branco);
+        cursor: pointer;
+    }
+
+    .lista-menu__item:hover {
+        background: var(--azul-degrade);
+    }
+
+    .lista-menu__item:hover > .lista-menu__link {
+        -webkit-text-fill-color: var(--branco);
+        text-decoration: none;
+    }
+}
+
+/* Desktop's screen */
+
+@media screen and (min-width: 1728px) {
+    .cabecalho {
+        padding: 0 2em;
+    }
+
+    .container__link {
+        align-items: center;
+        color: var(--preto);
+        font-size: 24px;
+        font-weight: 500;
+        display: flex;
+        text-decoration: none;
+    }
+
+    .container__texto {
+        display: block;
+    }
+}

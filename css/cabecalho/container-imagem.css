@@ -1,0 +1,9 @@
+.container__imagem {
+    padding: 0em 1em;
+}
+
+@media screen and (min-width: 1024px) {
+    .container__imagem:hover {
+        border-bottom: 2px solid var(--azul-escuro);
+    }
+}
